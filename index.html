@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CIVIC-CONNECT - AI Civic Issue Reporting & Resolution</title>
+    <meta name="description" content="Crowdsourced civic issue reporting and resolution platform that routes user photos directly to the appropriate municipal department." />
+    <meta property="og:title" content="CIVIC-CONNECT - AI Civic Issue Reporting & Resolution" />
+    <meta property="og:description" content="Crowdsourced civic issue reporting and resolution platform that routes user photos directly to the appropriate municipal department." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      // Vite HMR is disabled in AI Studio preview environment
+      if (typeof window !== 'undefined' && window.WebSocket) {
+        const _NativeWebSocket = window.WebSocket;
+        window.WebSocket = function (url, protocols) {
+          if (protocols === 'vite-hmr' || (typeof url === 'string' && (url.includes('token=') || url.includes('/@vite/')))) {
+            return {
+              readyState: 1,
+              send: function () {},
+              close: function () {},
+              addEventListener: function (type, listener) {
+                if (type === 'open') setTimeout(listener, 0);
+              },
+              removeEventListener: function () {},
+              dispatchEvent: function () { return true; }
+            };
+          }
+          return new _NativeWebSocket(url, protocols);
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
