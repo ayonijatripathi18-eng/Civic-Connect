@@ -1,0 +1,6 @@
+{
+  "name": "CIVIC-CONNECT",
+  "description": "Crowdsourced civic issue reporting and resolution platform that routes user photos directly to the appropriate municipal department.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
